@@ -162,11 +162,11 @@ function getVideos(doc) {
             var node = nodes[index];
             if (node.type === "tag")
                 video = node.attribs.content;
-            nodeType = nodeTypes && nodeTypes[index];
+            nodeType = nodeTypes === null || nodeTypes === void 0 ? void 0 : nodeTypes[index];
             if ((nodeType === null || nodeType === void 0 ? void 0 : nodeType.type) === "tag") {
                 videoType = nodeType ? nodeType.attribs.content : null;
             }
-            nodeSecureUrl = nodeSecureUrls && nodeSecureUrls[index];
+            nodeSecureUrl = nodeSecureUrls === null || nodeSecureUrls === void 0 ? void 0 : nodeSecureUrls[index];
             if ((nodeSecureUrl === null || nodeSecureUrl === void 0 ? void 0 : nodeSecureUrl.type) === "tag") {
                 videoSecureUrl = nodeSecureUrl ? nodeSecureUrl.attribs.content : null;
             }
